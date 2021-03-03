@@ -1,0 +1,41 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT * WHERE { 
+	GRAPH <http://bioportal.bioontology.org/ontologies/SNOMEDCT> { 
+		?s ?p ?o .
+		FILTER(?s = <:id:>)
+		FILTER((?p = <http://purl.bioontology.org/ontology/SNOMEDCT/has_causative_agent>) || 
+			           (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/cause_of >) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/causative_agent_of>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/definitional_manifestation_of>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/due_to >) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/during >) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/has_active_ingredient>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/has_associated_finding >) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/associated_finding_of>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/has_causative_agent>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/has_definitional_manifestation>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/has_dependent>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/finding_context_of>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/has_finding_context >) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/has_finding_site>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/finding_site_of>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/has_occurrence>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/has_pathological_process>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/occurs_after>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/occurs_before>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/occurs_in>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/pathological_process_of>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/substance_used_by>) ||
+                       (?p = <http://purl.bioontology.org/ontology/SNOMEDCT/uses_substance>) ||
+                       (?p = <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>) ||
+			           (?p = <http://www.w3.org/2004/02/skos/core#prefLabel>) ||
+					   (?p = <http://www.w3.org/2004/02/skos/core#altLabel>)||
+          (?p = <http://www.w3.org/2000/01/rdf-schema#subClassOf>)) 
+			     OPTIONAL{?o ?a ?b.
+				    FILTER((?a = <http://www.w3.org/2004/02/skos/core#prefLabel>) ||
+				                 (?a = <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>) &&
+				                (?b !=" + changeBlank.replace('`', '"') + "))}
+	} 
+}
