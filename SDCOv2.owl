@@ -33,6 +33,7 @@
 
 
     <!-- http://www.semanticweb.org/daniel/ontologies/2020/6/SDCO#after -->
+    
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/2020/6/SDCO#after">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
