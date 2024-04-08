@@ -32,6 +32,75 @@ The deployment of the network can be performed in GraphDB.
 
 ## Ontology visualization
 Here you will find different examples of the construction and visualization of the ontology created and the integration with SNOMED CT.
+---
+### Taxonomy of Sleep disorders
+**Taxonomy of Sleep disorders in Protégé**  
+![alt text](<png/1 - Sleep disorders texonomy.png>)
 
-### Sleep disorders taxonomy
-![Sleep disorders taxonomy in Protege](png/1 - Sleep disorders texonomy.png)
+**Taxonomy of Sleep disorders visualized**  
+![alt text](<png/1.1 - Sleep disorders texonomy.png>)
+---
+### Taxonomy of Medical
+**Taxonomy of Medical classes**  
+![alt text](<png/2 - Medical classes taxonomy.png>)
+
+**Example of some medical classes taxonomy**  
+![alt text](<png/2.1 - medical classes taxonomy example.png>)
+
+**Examples of some medical classes taxonomy visualized**  
+![alt text](<png/2.3 - medical classes taxonomy example.png>)
+![alt text](<png/2.4 - medical classes taxonomy example.png>)
+---
+### Taxonomy of Diseases
+**Taxonomy of Disease classes**  
+![alt text](<png/3 - diseases classes taxonomy.png>)
+![alt text](<png/3.1 - diseases classes taxonomy.png>)
+
+**Taxonomy of Disease classes visualized**  
+![alt text](<png/3.2 - diseases classes taxonomy.png>)
+---
+### Properties
+**Properties**  
+![alt text](<png/4 - properties.png>)
+
+**Examples of properties**  
+![alt text](<png/4.1 - properties.png>)
+![alt text](<png/4.2 - properties.png>)
+![alt text](<png/4.3 - properties.png>)
+---
+### Visualization of the new ontology
+**Visualization of the new ontology**  
+![alt text](<png/5 - new ontology.png>)
+![alt text](<png/5.1 - new ontology.png>)
+---
+### Examples of fragments extracted from SNOMED CT
+**Examples of fragments extracted from SNOMED CT via Bioportal**  
+![alt text](<png/6 - snomed example.png>)
+![alt text](<png/6.1 - snomed example.png>)
+![alt text](<png/6.2 - snomed example.png>)
+---
+<!---**Ontology integration with SNOMED CT fragments using `owl2:sameAs`**  
+![alt text](<png/7 - integration.png>)--->
+### Integration of ontologies at class, property and instance level
+**Ontology integration with SNOMED CT fragments using `owl2:equivalentClass`**  
+![alt text](<png/7.1 - integration.png>)
+![alt text](<png/7.2 - integration equivalentClass.png>)
+
+![alt text](<png/7.3 - integration equivalentClass.png>)
+![alt text](<png/7.4 - integration equivalentClass.png>)
+
+**Ontology integration with SNOMED CT fragments using `owl2:equivalentProperty`**  
+![alt text](<png/7.5 - integration equivalentProperty.png>)
+![alt text](<png/7.6 - integration equivalentProperty.png>)
+
+**Ontology integration with SNOMED CT fragments using `owl2:sameAs`**  
+![alt text](<png/7.7 - integration sameAs.png>)
+![alt text](<png/7.8 - integration sameAs.png>)
+
+![alt text](<png/7.9 - integration sameAs.png>)
+![alt text](<png/7.10 - integration sameAs.png>)
+---
+### Deployment using GraphDB
+**Visualization in GraphDB**  
+![alt text](<png/8 - graphdb.png>)
+![alt text](<png/8.1 - graphdb.png>)
