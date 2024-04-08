@@ -3,6 +3,7 @@ Ontology developed for master thesis, in `RDF/XML` to model the influence relati
 
 Full thesis article in Spanish at: https://repositorio.uniandes.edu.co/entities/publication/d6aab2d7-fb8e-4231-af35-6953a3a51ba8
 
+## Context
 The implementation of the new ontology was done in `RDF/XML` using `Protégé 5.5.0`.
 The ontology domain refers to sleep disorders. However, this being a domain studied by several disciplines, it was defined as the domain of Medicine, which encompasses not only Sleep Disorders, but also other diseases or factors that can trigger or cause Sleep Disorders, without leaving aside that Sleep Disorders are the central focus of this ontology.
 For the creation of the ontology there are a total of:
@@ -20,3 +21,17 @@ As for the properties there are a total of:
 All classes, properties and entities in the ontology have a `URI` given as follows, followed by the name of the class/entity or property:
 `http://www.semanticweb.org/daniel/ontologies/2020/6/SDCO#Nombre_ent`
 
+The Bioportal folder contains JAVA classes for extracting bioportal classes and properties.
+
+The ontology folder contains three files:
+* SDCOv2.owl -> is the ontology development created to model the influence relationships between sleep disorders and diseases.
+* sdco_snomed_integrated.owl -> contains the ontology created in SDCOv2.owl and the integration with certain classes extracted from the SCNOMED CT ontology hosted in Bioportal.
+* SPARQL_query.rq -> SPARQL queries for ontology information extraction.
+
+The deployment of the network can be performed in GraphDB.
+
+## Ontology visualization
+Here you will find different examples of the construction and visualization of the ontology created and the integration with SNOMED CT.
+
+### Sleep disorders taxonomy
+![Sleep disorders taxonomy in Protege](png/1 - Sleep disorders texonomy.png)
